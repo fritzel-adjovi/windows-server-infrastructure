@@ -1,11 +1,11 @@
-# 🪟 Infrastructure Windows Server — ETI 250 personnes
+#  Infrastructure Windows Server — ETI 250 personnes
 
 Conception et déploiement d'une infrastructure Windows Server complète pour une ETI de 250 personnes.  
 Projet de groupe réalisé à l'**IPSSI Lille** — Semaine du 02 au 06 février 2026.
 
 **Équipe** : Zakari Ghout · Lukas Vachet · Fritzel ADJOVI · Mohamadou Lamine Nael · Tehei Chan
 
-## 🎯 Objectifs
+##  Objectifs
 
 Répondre à 6 besoins critiques identifiés :
 
@@ -18,7 +18,7 @@ Répondre à 6 besoins critiques identifiés :
 | Accès distant | Services Bureau à distance | Remote Desktop Services |
 | Sauvegarde et continuité | Sauvegarde planifiée | VEEAM Backup |
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
                     INTERNET / WAN
@@ -59,7 +59,7 @@ Répondre à 6 besoins critiques identifiés :
 | S3 | 192.168.10.33 | Serveur de stockage |
 | Plage DHCP clients | 192.168.10.51 – 253 | Postes utilisateurs |
 
-## ⚙️ Configuration déployée
+##  Configuration déployée
 
 ### Active Directory (SRV-DC01)
 - Domaine : `entreprise.local`
@@ -80,9 +80,9 @@ Répondre à 6 besoins critiques identifiés :
 ### VEEAM Backup
 - Sauvegarde quotidienne planifiée
 - System State + données critiques
-- Test de restauration validé ✅
+- Test de restauration validé 
 
-## 📜 Script PowerShell — Création des utilisateurs
+##  Script PowerShell — Création des utilisateurs
 
 ```powershell
 # Créer les utilisateurs Active Directory
@@ -114,7 +114,7 @@ Write-Host "Utilisateurs créés avec succès !"
 Get-ADUser -Filter * | Select-Object Name, Enabled
 ```
 
-## 💰 Estimation budgétaire
+##  Estimation budgétaire
 
 | Poste | Détail | Coût |
 |-------|--------|------|
